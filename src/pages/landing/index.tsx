@@ -10,10 +10,12 @@ const Landing = () => {
     return (
         <div className={'mt-20 flex items-center'}>
             <ul className={'flex flex-col gap-3 w-1/2 md:w-1/3 mx-auto'}>
-              <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
-                  <Link to={'/first-animation'}>First Animation</Link></li>
-              <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
-                  <Link to={'/control-callback'}>Control callback</Link></li>
+                <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
+                    <Link to={'/first-animation'}>First Animation</Link></li>
+                <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
+                    <Link to={'/control-callback'}>Control callback</Link></li>
+                <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
+                    <Link to={'/stagger'}>Stagger</Link></li>
             </ul>
         </div>
     )
