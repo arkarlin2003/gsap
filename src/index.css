@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+.silhouette {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    /*margin: auto;*/
+}
+
+.silhouette .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#Bulbasaur {
+    background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png);
+}
+#Bulbasaur .cover {
+    background-image: url(https://assets.codepen.io/16327/001-silhouette.png);
+}
+
+#Charmander {
+    background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png);
+}
+#Charmander .cover {
+    background-image: url(https://assets.codepen.io/16327/004-silhouette.png);
+}
+
+#Squirtle {
+    background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png);
+}
+#Squirtle .cover {
+    background-image: url(https://assets.codepen.io/16327/007-silhouette.png);
+}
