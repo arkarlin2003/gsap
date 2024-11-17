@@ -7,6 +7,9 @@ const FirstAnimation = lazy(()=>import('./pages/first-animation'))
 const ControlCallback = lazy(()=> import('./pages/control-callback'))
 const Landing = lazy(() => import('./pages/landing'))
 const Stagger = lazy(() => import('./pages/stagger'))
+const Scrolltigger = lazy(()=>import('./pages/scrolltigger'))
+const Loading = lazy(() => import('./pages/loading'))
+const RevalAnimation = lazy(() => import('./pages/reveal-animation'))
 
 export default  function Router(){
     return (
@@ -17,6 +20,9 @@ export default  function Router(){
                     <Route path={'first-animation'} element={<FirstAnimation/>}/>
                     <Route path={'control-callback'} element={<ControlCallback/>}/>
                     <Route path={'stagger'} element={<Stagger/>}/>
+                    <Route path={'scroll-tigger'} element={<Scrolltigger/>}/>
+                    <Route path={'loading'} element={<Loading/>}/>
+                    <Route path={'reveal-animation'} element={<RevalAnimation/>}/>
                 </Route>
             </Routes>
         </Suspense>

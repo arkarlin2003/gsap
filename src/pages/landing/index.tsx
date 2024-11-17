@@ -16,6 +16,12 @@ const Landing = () => {
                     <Link to={'/control-callback'}>Control callback</Link></li>
                 <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
                     <Link to={'/stagger'}>Stagger</Link></li>
+                <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
+                    <Link to={'/scroll-tigger'}>Scroll tigger</Link></li>
+                <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
+                    <Link to={'/loading'}>Loading</Link></li>
+                <li className={'nav-item text-sm py-2 px-3 text-center rounded-lg bg-gray-200 hover:text-orange-500 hover:duration-300 text-gray-600 hover:font-medium hover:transition-all hover:ease-out'}>
+                    <Link to={'/reveal-animation'}>Reveal Animation</Link></li>
             </ul>
         </div>
     )
