@@ -10,6 +10,7 @@ const Stagger = lazy(() => import('./pages/stagger'))
 const Scrolltigger = lazy(()=>import('./pages/scrolltigger'))
 const Loading = lazy(() => import('./pages/loading'))
 const RevalAnimation = lazy(() => import('./pages/reveal-animation'))
+const Slider = lazy(() => import('./pages/slider'))
 
 export default  function Router(){
     return (
@@ -23,6 +24,7 @@ export default  function Router(){
                     <Route path={'scroll-tigger'} element={<Scrolltigger/>}/>
                     <Route path={'loading'} element={<Loading/>}/>
                     <Route path={'reveal-animation'} element={<RevalAnimation/>}/>
+                    <Route path={'slider'} element={<Slider/>}/>
                 </Route>
             </Routes>
         </Suspense>

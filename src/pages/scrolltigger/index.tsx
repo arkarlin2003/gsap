@@ -1,52 +1,49 @@
-import {useEffect} from "react";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger"
+import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ScrollPage = () => {
+  const black = useRef(null);
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
+  useGSAP(
+    () => {
+      gsap.to("#black", {
+        x: 500,
+        duration: 3,
+        scrollTrigger: {
+          trigger: "#black",
+          start: "top center",
+          end: "bottom 30%",
+          markers: true,
+          pin: true,
+          toggleActions: "restart none none none",
+          scrub: true,
+          //   onEnter onLeave onEnterBack onLeaveBack
+          //   scrub: true,
+        },
+      });
+    },
+    {
+      dependencies: [],
+      revertOnUpdate: true,
+    }
+  );
 
-        const tl = gsap.timeline({
-            scrollTrigger:{
-                trigger:'.a',
-                start:'top center',
-                endTrigger:'.c',
-                end:'top 100px',
-                markers:true,
-                pin:true,
-                scrub:3,
-                toggleActions:'restart pause reverse pause'
-            },
-        })
+  return (
+    <div className={"h-[1000px] mb-[1000px] w-full "}>
+      <div className="bg-blue-500 h-[500px]"></div>
+      <div className="bg-red-500 h-[500px]">
+        <div
+          id="black"
+          ref={black}
+          className="bg-black rounded-xl size-20"
+        ></div>
+      </div>
+    </div>
+  );
+};
 
-        tl.to('.b',{
-            x:700,
-            rotate:360,
-            duration:3
-        }).to('.b',{
-            backgroundColor:'orange',
-            duration:1.5,
-        }).to('.b',{
-            x:0,
-            rotate:-360,
-            duration:2,
-        })
-
-    }, []);
-    return (
-        <div className={'h-[1000px] mb-[1000px] w-full flex flex-col justify-around'}>
-            <div className={'a w-20 rounded-lg h-20 bg-red-500'}></div>
-            <div className='relative'>
-                <div className={'ghost w-20 rounded-lg h-20 bg-gray-500 '}>
-                </div>
-                <div className={'b w-20 rounded-lg h-20 bg-blue-500 absolute top-0'}></div>
-            </div>
-
-            <div className={'c w-20 rounded-lg h-20 bg-green-500'}></div>
-        </div>
-    )
-}
-
-
-export default ScrollPage
+export default ScrollPage;
